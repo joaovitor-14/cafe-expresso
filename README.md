@@ -57,3 +57,9 @@ O sistema garante mais organização, segurança e eficiência no atendimento, e
    ```bash
    git clone https://github.com/joaovitor-14/cafe-expresso.git
 2. Execute o arquivo principal na sua IDE
+
+
+### Alunos
+Gabrielly da Silva Xavier
+
+João Vitor Silva Moreira
