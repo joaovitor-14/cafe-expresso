@@ -39,11 +39,12 @@ O sistema foi estruturado em três classes principais:
 5. O atendente acompanha o pedido.
 6. O pedido é finalizado e entregue ao cliente.
 
-### Requisitos Funcionais
-- **RF01**: O sistema deve permitir o cadastro de produtos com nome e preço.
-- **RF02**: O sistema deve permitir adicionar múltiplos itens a um pedido.
-- **RF03**: O sistema deve calcular automaticamente o valor total do pedido.
-- **RF04**: O sistema deve permitir a alteração do status do pedido.
+### Funcionalidades
+- Permitir cadastrar produtos com nome e preço
+- Adicionar vários itens em um mesmo pedido
+- Calcular automaticamente o valor total da compra
+- Atualizar o andamento do pedido (pendente, pago, em preparo e finalizado)
+- Garantir que o pedido só continue depois que o pagamento for feito
 
 ### Considerações
 O sistema garante mais organização, segurança e eficiência no atendimento, evitando erros e melhorando a experiência do cliente.
@@ -52,15 +53,17 @@ O sistema garante mais organização, segurança e eficiência no atendimento, e
 - **Java** – linguagem principal do projeto
 - **NetBeans** – IDE utilizada no desenvolvimento
 - **Git e GitHub** – controle de versão
-- **POO (Programação Orientada a Objetos)** – estruturação do sistema
+- **POO (Programação Orientada a Objetos)** – organização do código
+- **JUnit 4 – utilizado para os testes unitários
 
 ### Como Executar o Projeto
 
 #### Pré-requisitos
-- Ter o Java instalado
-- Ter o NetBeans instalado
+- Ter o Java (JDK) instalado
+- Ter uma IDE instalada
 
 #### Passo a passo
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/ProjetoCafeExpresso.git
+   git clone https://github.com/joaovitor-14/cafe-expresso.git
+2. Execute o arquivo main na sua IDE
