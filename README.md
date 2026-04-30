@@ -54,7 +54,8 @@ O sistema garante mais organização, segurança e eficiência no atendimento, e
 - **NetBeans** – IDE utilizada no desenvolvimento
 - **Git e GitHub** – controle de versão
 - **POO (Programação Orientada a Objetos)** – organização do código
-- **JUnit 4 – utilizado para os testes unitários
+- **JUnit 4** – utilizado para os testes unitários
+- **Hamcrest 1.3** - Para criar expressões de verificação flexíveis e legíveis nos testes.
 
 ### Como Executar o Projeto
 
