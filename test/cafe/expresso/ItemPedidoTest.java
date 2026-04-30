@@ -6,39 +6,35 @@ import static org.junit.Assert.*;
 public class ItemPedidoTest {
 
     @Test
-    void deveCalcularSubtotalCorretamente() {
-        Produto produto = new Produto("Cappuccino", 5.0);
-        ItemPedido item = new ItemPedido(produto, 4);
-
-        double subtotal = item.calcularSubtotal();
-
-         assertEquals(20.0, subtotal);
+    public void testCalcularSubtotalCorreto() {
+        Produto p = new Produto("Cappuccino", 8.50);
+        ItemPedido item = new ItemPedido(p, 3);
+        assertEquals(25.50, item.calcularSubtotal(), 0.001);
     }
 
     @Test
-    void deveLancarExcecaoParaQuantidadeZero() {
-        Produto produto = new Produto("Cappuccino", 10.0);
-
-        assertThrows(IllegalArgumentException.class, () -> {
-            new ItemPedido(produto, 0);
-        });
+    public void testGetProdutoRetornaCorretamente() {
+        Produto p = new Produto("Espresso", 5.00);
+        ItemPedido item = new ItemPedido(p, 2);
+        assertEquals(p, item.getProduto());
     }
 
     @Test
-    void deveLancarExcecaoParaQuantidadeNegativa() {
-        Produto produto = new Produto("Cappuccino", 2.0);
-
-        assertThrows(IllegalArgumentException.class, () -> {
-            new ItemPedido(produto, -3);
-        });
+    public void testGetQuantidadeRetornaCorretamente() {
+        Produto p = new Produto("Latte", 7.00);
+        ItemPedido item = new ItemPedido(p, 4);
+        assertEquals(4, item.getQuantidade());
     }
 
-    @Test
-    void gettersDevemRetornarValoresCorretos() {
-        Produto produto = new Produto("Cappuccino", 3.5);
-        ItemPedido item = new ItemPedido(produto, 2);
+    @Test(expected = IllegalArgumentException.class)
+    public void testQuantidadeZeroDeveLancarExcecao() {
+        Produto p = new Produto("Cappuccino", 8.50);
+        new ItemPedido(p, 0);
+    }
 
-        assertEquals(produto, item.getProduto());
-        assertEquals(2, item.getQuantidade());
+    @Test(expected = IllegalArgumentException.class)
+    public void testQuantidadeNegativaDeveLancarExcecao() {
+        Produto p = new Produto("Cappuccino", 8.50);
+        new ItemPedido(p, -1);
     }
 }
