@@ -14,7 +14,7 @@ package cafe.expresso;
     }
 
     public double calcularSubtotal() {
-        return produto.getPreco() * quantidade;
+        return produto.getPrecoUnitario() * quantidade;
     }
 
     public Produto getProduto() {
