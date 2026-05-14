@@ -42,4 +42,11 @@ public class Pedido {
         }
         this.status = StatusPedido.FINALIZADO;
     }
+    public StatusPedido getStatus() {
+        return status;
+    }
+
+    public List<ItemPedido> getItens() {
+        return itens;
+    }
 }
