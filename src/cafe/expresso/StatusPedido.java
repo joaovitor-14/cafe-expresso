@@ -1,0 +1,8 @@
+package cafe.expresso;
+
+public enum StatusPedido {
+    PENDENTE,
+    PAGO,
+    EM_PREPARO,
+    FINALIZADO
+}
