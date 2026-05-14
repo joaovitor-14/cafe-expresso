@@ -22,4 +22,24 @@ public class Pedido {
         }
         return total;
     }
+    public void pagar() {
+        if (status != StatusPedido.PENDENTE) {
+            throw new IllegalStateException("Pedido nao pode ser pago pois nao esta pendente");
+        }
+        this.status = StatusPedido.PAGO;
+    }
+
+    public void enviarParaCozinha() {
+        if (status != StatusPedido.PAGO) {
+            throw new IllegalStateException("Pedido nao pode ir para cozinha pois ainda nao foi pago");
+        }
+        this.status = StatusPedido.EM_PREPARO;
+    }
+
+    public void finalizarPedido() {
+        if (status != StatusPedido.EM_PREPARO) {
+            throw new IllegalStateException("Pedido nao pode ser finalizado pois ainda nao esta em preparo");
+        }
+        this.status = StatusPedido.FINALIZADO;
+    }
 }
